@@ -20,5 +20,5 @@ run:
     cd node-app
     npm install
     npm run build
-    cp manifest_dev.yml ./build
+    cp ci/manifest_dev.yml ./build
     cp -r build ../
