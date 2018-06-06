@@ -21,6 +21,6 @@ jobs:
       - get: node-app
       - put: cf-dev-server
         params:
-          manifest: deploy-cf-node-app/manifest_dev.yml
-          path: deploy-cf-node-app
+          manifest: node-app/manifest_dev.yml
+          path: node-app
           current_app_name: savanta-development
