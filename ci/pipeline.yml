@@ -1,0 +1,26 @@
+resources:
+  - name: node-app
+    type: git
+    source:
+      uri: git@github.com:iranda/node-app.git
+      branch: master
+      access_token: ((github-access-token))
+      private_key: ((github-private-key))
+  - name: cf-dev-server
+    type: cf
+    source:
+      api: https://api.run.pivotal.io
+      username: ((cf-username))
+      password: ((cf-password))
+      organization: ((cf-org))
+      space: ((cf-dev-space))
+
+jobs:
+  - name: deploy-cf-node-app
+    plan:
+      - get: node-app
+      - put: cf-dev-server
+        params:
+          manifest: deploy-cf-node-app/manifest_dev.yml
+          path: deploy-cf-node-app
+          current_app_name: savanta-development

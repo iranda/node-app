@@ -1,0 +1,9 @@
+---
+applications:
+- name: savanta-development
+  memory: 256M
+  instances: 1
+  command: npm run build && npm run start
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
+  services:
+    - dev-rbc-flexben-mongo
