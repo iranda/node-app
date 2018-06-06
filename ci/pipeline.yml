@@ -26,3 +26,9 @@ jobs:
           manifest: node-app/ci/manifest_dev.yml
           path: build
           current_app_name: savanta-development
+          environment_variables:
+            ACCESS_KEY_ID: ((aws-acess-key-id))
+            SECRET_ACCESS_KEY: ((aws-access-key))
+            EGNYTE_API_KEY: ((egnyte-api-key))
+            EGNYTE_TOKEN: ((egnyte-token))
+            EGNYTE_WEBSITE: https://savanta.egnyte.com
