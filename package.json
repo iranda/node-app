@@ -4,7 +4,7 @@
   "description": "Test app for concource",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf build && babel src --out-dir build && cp -fR src/views/ build/views/ && cp package.json build/package.json",
+    "build": "rm -rf build && babel src --out-dir build && cp package.json build/package.json",
     "start": "node build/server"
   },
   "author": "",

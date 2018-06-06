@@ -20,7 +20,7 @@ jobs:
     plan:
       - get: node-app
       - task: build
-          file: node-app/tasks/build.yml
+        file: node-app/ci/tasks/build.yml
       - put: cf-dev-server
         params:
           manifest: node-app/manifest_dev.yml
