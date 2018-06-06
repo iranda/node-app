@@ -1,0 +1,40 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Test app for concource",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build && babel src --out-dir build && cp -fR src/views/ build/views/ && cp package.json build/package.json",
+    "start": "node build/server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-foreach": "^0.1.3",
+    "aws-sdk": "^2.9.0",
+    "better-npm-run": "0.0.14",
+    "body-parser": "^1.16.1",
+    "egnyte-js-sdk": "^2.6.4",
+    "ejs": "^2.5.5",
+    "express": "^4.14.1",
+    "fs": "0.0.1-security",
+    "moment": "^2.17.1",
+    "mongodb": "^2.2.22",
+    "mongoose": "^4.8.0",
+    "multer": "^1.3.0",
+    "passport": "^0.3.2",
+    "path": "^0.12.7",
+    "shortid": "^2.2.6",
+    "xlsx": "^0.8.2",
+    "xlsx-style": "^0.8.13"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-preset-es2015": "^6.22.0",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "nodemon": "^1.11.0"
+  }
+}
