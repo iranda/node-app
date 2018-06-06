@@ -19,6 +19,8 @@ jobs:
   - name: deploy-cf-node-app
     plan:
       - get: node-app
+      - task: build
+          file: node-app/tasks/build.yml
       - put: cf-dev-server
         params:
           manifest: node-app/manifest_dev.yml

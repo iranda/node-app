@@ -1,0 +1,24 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: tribalscaledocker/concourse-node
+    tag: '8-alpine'
+
+inputs:
+  - name: node-app
+outputs:
+  - name: build
+
+run:
+  path: sh
+  args:
+  - -exc
+  - |
+    cd node-app
+    npm install
+    npm run build
+    cp manifest.yml ./build
+    cp -r build ../
